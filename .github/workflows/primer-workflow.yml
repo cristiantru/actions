@@ -1,0 +1,13 @@
+name: Primer Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-lastest
+
+
+    steps:
+      -name: Mostrar mensaje
+        run: echo "Este es un mensaje de prueba desde el workflow de GitHub Actions." 
+        
