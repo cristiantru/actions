@@ -1,25 +1,26 @@
-name: Pruebas unitarias automáticas
+name: Node.js CI
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push, pull_request]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Clonar el repositorio
+      # Clona tu repositorio
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js
+      # Configura Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: '20'
 
-      - name: Instalar dependencias
+      # Instala dependencias (en la raíz)
+      - name: Install dependencies
         run: npm install
 
-      - name: Ejecutar pruebas unitarias
+      # Ejecuta pruebas
+      - name: Run tests
         run: npm test
