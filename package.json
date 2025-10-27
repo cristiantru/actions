@@ -1,0 +1,12 @@
+{
+  "name": "actions-project",
+  "version": "1.0.0",
+  "description": "Proyecto de prueba con GitHub Actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"✅ Ejecutando pruebas simuladas...\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Tu nombre",
+  "license": "MIT"
+}
